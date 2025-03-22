@@ -1,7 +1,7 @@
 {
     "name": "space-project",
     "private": true,
-    "homepage": "https://MAT06mat.github.io/space",
+    "homepage": "https://MAT06mat.github.io/space/",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
