@@ -6,3 +6,7 @@
   padding: 0;
   display: block;
 }
+
+.background-button {
+  padding: 1rem 1rem;
+}

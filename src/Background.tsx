@@ -3,14 +3,14 @@ import View360, { CubemapProjection } from "@egjs/view360";
 
 //https://naver.github.io/egjs-view360/docs/projections/cubemap
 
-function Background() {
+function Background({ src }: { src: string }) {
     const containerRef = useRef(null);
     const canvasRef = useRef(null);
     useEffect(() => {
         if (!containerRef.current || !canvasRef.current) return;
 
         const projection = new CubemapProjection({
-            src: "./map.png",
+            src: src,
         });
 
         const viewer = new View360(containerRef.current, {
@@ -20,7 +20,7 @@ function Background() {
         return () => {
             viewer.destroy();
         };
-    }, []);
+    }, [src]);
 
     return (
         <div ref={containerRef} className="background">
