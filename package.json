@@ -1,12 +1,12 @@
 {
     "name": "space-project",
     "private": true,
-    "homepage": "https://MAT06mat.github.io/space/",
+    "homepage": "./",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc -b && vite build",
+        "build": "tsc -b && vite build --base=./",
         "lint": "eslint .",
         "preview": "vite preview",
         "predeploy": "npm run build",

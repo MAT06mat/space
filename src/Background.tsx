@@ -10,7 +10,7 @@ function Background() {
         if (!containerRef.current || !canvasRef.current) return;
 
         const projection = new CubemapProjection({
-            src: "/map.png",
+            src: "./map.png",
         });
 
         const viewer = new View360(containerRef.current, {
