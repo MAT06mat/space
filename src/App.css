@@ -8,5 +8,17 @@
 }
 
 .background-button {
+  position: absolute;
   padding: 1rem 1rem;
+}
+
+.credits {
+  color: azure;
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+}
+
+.credits a {
+  color: azure;
 }

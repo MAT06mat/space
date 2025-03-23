@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Background from "./Background";
 import BackgroundButton from "./BackgroundButton";
+import { useCookies } from "react-cookie";
 
 const backgrounds = [
     { name: "Défaut", src: "./panoramas/default.png" },
@@ -17,14 +18,29 @@ const backgrounds = [
 ];
 
 function App() {
-    const [background, setBackground] = useState(backgrounds[0].src);
+    const [cookies, setCookie] = useCookies(["background"]);
+    const [background, setBackground] = useState(
+        cookies.background ? cookies.background : backgrounds[0].src
+    );
+
+    function handleBackground(newBackground: string) {
+        setBackground(newBackground);
+        setCookie("background", newBackground);
+    }
+
     return (
         <>
             <Background src={background} />
             <BackgroundButton
-                setBackground={setBackground}
+                setBackground={handleBackground}
                 backgrounds={backgrounds}
             />
+            <div className="credits">
+                <p>
+                    Site web par{" "}
+                    <a href="https://github.com/MAT06mat">MAT06mat</a>
+                </p>
+            </div>
         </>
     );
 }

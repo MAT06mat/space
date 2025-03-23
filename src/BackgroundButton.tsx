@@ -65,8 +65,10 @@ export default function BackgroundButton({
         setAnchorEl(null);
     };
     function chooseBackground(src: string) {
-        setBackground(src);
         handleClose();
+        setTimeout(() => {
+            setBackground(src);
+        }, 500);
     }
 
     return (
