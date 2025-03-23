@@ -31,15 +31,17 @@ function App() {
     return (
         <>
             <Background src={background} />
-            <BackgroundButton
-                setBackground={handleBackground}
-                backgrounds={backgrounds}
-            />
-            <div className="credits">
-                <p>
-                    Site web par{" "}
-                    <a href="https://github.com/MAT06mat">MAT06mat</a>
-                </p>
+            <div className="top">
+                <BackgroundButton
+                    setBackground={handleBackground}
+                    backgrounds={backgrounds}
+                />
+                <div className="credits">
+                    <p>
+                        Site web par{" "}
+                        <a href="https://github.com/MAT06mat">MAT06mat</a>
+                    </p>
+                </div>
             </div>
         </>
     );

@@ -7,16 +7,21 @@
   display: block;
 }
 
-.background-button {
+.top {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.background-button {
   padding: 1rem 1rem;
 }
 
 .credits {
   color: azure;
-  position: absolute;
-  right: 0;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
 }
 
 .credits a {
